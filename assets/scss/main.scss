@@ -1,0 +1,82 @@
+@import "config/tokens";
+
+@import "base/reset";
+
+@import "utilities/spacing";
+
+@import "composition/stack";
+
+@import "blocks/card";
+@import "blocks/skills";
+@import "blocks/stars";
+@import "content/home/home";
+@import "effects/effects";
+
+
+
+ 
+#title {
+  top: 50%;
+  left: 0;
+  right: 0;
+  color: #FFF;
+  text-align: left;
+  font-family: 'Space Mono', monospace, sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  margin-top: -2rem;
+  padding-left: 10px;
+
+  span {
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem 2rem 2rem;
+}
+
+#logo {
+  font-family: 'Space Mono', sans-serif;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+#menu {
+  display: flex;
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  li {
+    margin-left: 1rem;
+  }
+
+  gap: 25px; // espace entre les liens
+
+
+  a {
+    font-family: 'Space Mono', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0.8;
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-m);
+  background-color: red;
+}
+
+.skill span {
+  width: 150px;
+}
+
+.skill__bar {
+  flex: 1;
+  height: 12px;
+  background: #eee;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-left: var(--space-s);
+}
+
+.skill__progress {
+  height: 100%;
+  width: 0;
+  background: var(--color-primary, #0077cc);
+  animation: fill 1.2s ease-out forwards;
+}
+
+@keyframes fill {
+  to { width: var(--level); }
+}

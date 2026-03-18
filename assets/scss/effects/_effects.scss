@@ -1,0 +1,14 @@
+@keyframes parallaxText {
+  from {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  to {
+    transform: translate(-50%, -50%) translateY(-100px);
+  }
+}
+
+@keyframes float {
+  0% { transform: translate(-50%, -50%) translateY(0px); }
+  50% { transform: translate(-50%, -50%) translateY(-10px); }
+  100% { transform: translate(-50%, -50%) translateY(0px); }
+}

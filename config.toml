@@ -1,0 +1,14 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Tomspace"
+
+[params]
+  greeting = "Hi there !"
+  name = "Thomas"
+  title = "I'm an"
+  function = "IT"
+  subtitle = "(and sometimes astronaut)"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,79 @@
+@function multiple-box-shadow($n, $max: 2000) {
+  $shadows: "#{random($max)}px #{random($max)}px #FFF";
+  @for $i from 2 through $n {
+    $shadows: "#{$shadows}, #{random($max)}px #{random($max)}px #FFF";
+  }
+  @return unquote($shadows);
+}
+
+$shadows-small: multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big: multiple-box-shadow(100);
+
+html {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #111827 0%, #090A0F 100%);
+  overflow: hidden;
+}
+
+#stars, #stars2, #stars3 {
+  background: transparent;
+  position: relative;
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    background: transparent;
+  }
+}
+
+#stars {
+  width: 1px; height: 1px; box-shadow: $shadows-small;
+  &:after { width: 1px; height: 1px; box-shadow: $shadows-small; }
+}
+#stars2 {
+  width: 2px; height: 2px; box-shadow: $shadows-medium;
+  &:after { width: 2px; height: 2px; box-shadow: $shadows-medium; }
+}
+#stars3 {
+  width: 3px; height: 3px; box-shadow: $shadows-big;
+  &:after { width: 3px; height: 3px; box-shadow: $shadows-big; }
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+  }
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows-big;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-big;
+  }
+}
+
+#stars, #stars2, #stars3 {
+  z-index: 0;
+}

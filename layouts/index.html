@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<div class="home">
+  <div class="home__presentation">
+
+    <h2 class="home__greeting">
+      👋 {{ .Site.Params.greeting }}
+    </h2>
+
+    <h1 class="home__title">
+      <span class="accent">It's me</span>
+      <span class="highlight">{{ .Site.Params.name }}</span><br>
+      {{ .Site.Params.title }}
+      {{ .Site.Params.function }}
+    </h1>
+
+    <p class="home__subtitle">
+      {{ .Site.Params.subtitle }}
+    </p>
+
+    <!--      <img src="/images/arrow.svg" class="home__arrow" alt="">
+  <img src="/images/earth.svg" class="home__earth" alt=""> -->
+    <img src="/images/astronaut.svg" class="home__astronaut" alt="">
+
+  </div>
+</div>
+
+{{ end }}

@@ -2,25 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toms'space</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toms'space</title>
 </head>
 
 
 <body>
-    {{ partial "header.html" . }}
-    
+  {{ partial "header.html" . }}
 
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
-    
-    <main class="stack">
-        {{ block "main" . }}
-        {{ end }}
-    </main>
+
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <main class="stack">
+    {{ block "main" . }}
+    {{ end }}
+  </main>
+  <script src="/js/menu.js"></script>
 </body>
 
-</html>
 
+</html>

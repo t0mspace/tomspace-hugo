@@ -1,0 +1,125 @@
+#navigation {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  position: relative;
+}
+
+#menuToggle {
+  display: none;
+  align-items: center;
+  z-index: 100;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition:
+      transform 0.3s,
+      opacity 0.3s;
+  }
+
+  // Animation hamburger → croix
+  input:checked ~ label span:nth-of-type(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  input:checked ~ label span:nth-of-type(2) {
+    opacity: 0;
+  }
+  input:checked ~ label span:nth-of-type(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+
+  li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: tomato;
+    }
+  }
+}
+
+// ----- Media Queries -----
+
+@media (max-width: 1023px) {
+  #menuToggle {
+    display: flex;
+  }
+
+  #menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 220px;
+    background: #ededed;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 5rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 50;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+
+    li a {
+      color: #232323;
+      font-size: 1.2rem;
+      padding: 1rem 1.5rem;
+      display: block;
+
+      &:hover {
+        color: tomato;
+      }
+    }
+  }
+
+  #menu.open {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 1024px) {
+  #menuToggle {
+    display: none;
+  }
+
+  #menuClose {
+    display: none;
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    transform: none;
+    background: transparent;
+    height: auto;
+    width: auto;
+    padding: 0;
+    box-shadow: none;
+  }
+}

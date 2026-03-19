@@ -9,24 +9,24 @@
 @import "blocks/card";
 @import "blocks/skills";
 @import "blocks/stars";
+@import "blocks/menu";
 @import "content/home/home";
 @import "effects/effects";
 
+#header {
+  display: flex;
+  justify-content: flex-start; // titre à gauche
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem; // espace entre le titre et le menu
+}
 
-
- 
 #title {
-  top: 50%;
-  left: 0;
-  right: 0;
-  color: #FFF;
-  text-align: left;
-  font-family: 'Space Mono', monospace, sans-serif;
+  color: #fff;
+  font-family: "Space Mono", monospace, sans-serif;
   font-weight: 400;
   font-size: 2.5rem;
   letter-spacing: 5px;
-  margin-top: -2rem;
-  padding-left: 10px;
 
   span {
     background: -webkit-linear-gradient(white, #38495a);
@@ -35,24 +35,14 @@
   }
 }
 
-#header {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 2rem 2rem 2rem;
-}
-
 #logo {
-  font-family: 'Space Mono', sans-serif;
+  font-family: "Space Mono", sans-serif;
   color: #fff;
   font-size: 20px;
   letter-spacing: 2px;
 }
 
-#menu {
+/* #menu {
   display: flex;
 
   ul {
@@ -79,4 +69,4 @@
       opacity: 1;
     }
   }
-}
+} */

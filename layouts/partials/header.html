@@ -7,16 +7,25 @@
 </head>
 
 <header id="header">
-    <h1 id="title">Tomspace</h1>
+  <h1 id="title">Tomspace</h1>
 
-    <nav id="menu">
-      <ul>
-        <li><a href="{{ "/" | relLangURL }}">Home</a></li>
-        <li><a href="{{ "/about/" | relLangURL }}">About</a></li>
-        <li><a href="{{ "/projects/" | relLangURL }}">Projects</a></li>
-        <li><a href="{{ "/blog/" | relLangURL }}">Blog</a></li>
-        <li><a href="{{ "/skills/" | relLangURL }}">Skills</a></li>
-        <li><a href="{{ "/contact/" | relLangURL }}">Contact</a></li>
-      </ul>
-    </nav>
+  <nav id="navigation" role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox" id="menuCheckbox" />
+      <label for="menuCheckbox">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <ul id="menu">
+
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#">Info</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="https://erikterwan.com/" target="_blank">Show me more</a></li>
+    </ul>
+  </nav>
 </header>
